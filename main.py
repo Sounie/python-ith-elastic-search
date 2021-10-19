@@ -1,11 +1,10 @@
 from elasticsearch7 import Elasticsearch
 
-def print_hi(name):
+def do_stuff():
     client = Elasticsearch("http://localhost:9200")
-    resp = client.info()
+    infoResp = client.info()
 
-    print(f'Cluster info: {resp}')
-
+    print(f'Cluster info: {infoResp}')
 
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    do_stuff()
